@@ -1,18 +1,45 @@
 ---
 title: "Untitled"
-author: "Your Name"
+author: "Gregory Sliwoski"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
     toc: true
+    toc_depth: 2
+    toc_float: true
+    theme: spacelab
+    fig_width: 7
+    fig_height: 5
     fig_caption: true
-    theme: flatly
+    df_print: paged
 ---
+```{r echo=F}
+# Other decent templates:
+##  journal
+##  flatly
+# Or check https://bootswatch.com/3/ 
+```
 
-## Introduction
+```{r setup, include=FALSE}
+basiclib <- c("dplyr","tidyr","knitr","stringr","kableExtra")
+reglib <- c("rms","glmnet"
+statslib <- c("Hmisc","pcaPP","summarytools") # Load first to avoid Hmisc nonsense
+plotlib <- c("ggplot2","GGally","cowplot")
 
-This is a very minimal example! The only thing which is changed in this template is a few of the default settings in the YAML. 
+invisible(lapply(statslib, library, character.only = TRUE))
+invisible(lapply(reglib, library, character.only = TRUE))
+#invisible(lapply(plotlib, library, character.only = TRUE))
+invisible(lapply(basiclib, library, character.only = TRUE))
 
-## Customisation
+knitrSet(lang='markdown', fig.path='figs/', fig.align='left', w=6.5, h=6.5, cache=TRUE)
+options(prType='html')
 
-A simple template like this might be useful to include if you have a common structure of report that you want to run. For example, you change the author name your name. You can edit the sections to include a generic layout.
+```
+
+# 1 {.tabset .tabset-fade .tabset-pills} 
+
+## 1A
+
+## 1B
+
+## 1C
