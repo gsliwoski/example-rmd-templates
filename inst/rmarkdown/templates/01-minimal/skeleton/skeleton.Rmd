@@ -22,7 +22,7 @@ output:
 
 ```{r setup, include=FALSE}
 basiclib <- c("dplyr","tidyr","knitr","stringr","kableExtra")
-reglib <- c("rms","glmnet"
+reglib <- c("rms","glmnet")
 statslib <- c("Hmisc","pcaPP","summarytools") # Load first to avoid Hmisc nonsense
 plotlib <- c("ggplot2","GGally","cowplot")
 
